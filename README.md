@@ -50,6 +50,7 @@ RUN `python manage.py makemigrations` and after that `python manage.py migrate` 
 START THE SERVER `python manager.py runserver`
 
 TEST IN POSTMAN:
+
 ![Screenshot 2021-05-15 at 23 50 33](https://user-images.githubusercontent.com/58259539/118380269-5a734800-b5d8-11eb-851b-45d04b785847.png)
 
 
