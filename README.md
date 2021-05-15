@@ -1,10 +1,15 @@
 # Django-Djoser-User-Registration-Module
-Rewriting a user registration is stressful. So I have created this module that would help you carry out user registration using Django Djoser. 
+Extending User Registration with Djoser should be done in a simple way. 
+So I have created this module that would help you carry out user registration using Django Djoser. 
 
+
+# STEPS 1
 In your you Django project, install Djoser and Django rest-framework.
 
+# STEP 2
 Copy the `accounts` folder and place it in your django project.
 
+# STEP 3
 Add the following to your INSTALLED_APPS in the `settings.py` file.
 ```
     # rest API implementation lib for django
@@ -17,6 +22,8 @@ Add the following to your INSTALLED_APPS in the `settings.py` file.
     # created apps
     'accounts',
  ```
+ 
+ # STEP 4
  Also add the following at the bottom of the `settings.py` file:
  
  ```
@@ -45,15 +52,21 @@ Add the following to your INSTALLED_APPS in the `settings.py` file.
     
 ```
 
+# STEP 5
 RUN `python manage.py makemigrations` and after that `python manage.py migrate` in the terminal
 
+# STEP 6
 START THE SERVER `python manager.py runserver`
 
-TEST IN POSTMAN:
+
+# TEST IN POSTMAN:
 
 ![Screenshot 2021-05-15 at 23 50 33](https://user-images.githubusercontent.com/58259539/118380269-5a734800-b5d8-11eb-851b-45d04b785847.png)
 
 
+
+
+# ADDING MORE FIELDS TO YOUR REGISTRATION TABLE
 You can add more fields to `accounts/models.py` by adding more fiedls to the following sections:
 
 ```
