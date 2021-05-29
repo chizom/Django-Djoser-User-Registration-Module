@@ -51,11 +51,38 @@ Add the following to your INSTALLED_APPS in the `settings.py` file.
     AUTH_USER_MODEL = 'accounts.NewUser'
     
 ```
-
 # STEP 5
+Add accounts.urls to the root url.py file. 
+e.g 
+```
+"""spinheard_backend URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/3.2/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/v1/account/', include('accounts.urls')),
+]
+```
+# STEP 6
 RUN `python manage.py makemigrations` and after that `python manage.py migrate` in the terminal
 
-# STEP 6
+# STEP 7
 START THE SERVER `python manager.py runserver`
 
 
@@ -84,7 +111,7 @@ class NewUser(AbstractBaseUser):
         return self.email
 ```
 
-FEEL FREE TO CONTRIBUTE TO THIS AND MAKE IT BETTER.
+FEEL FREE TO CONTRIBUTE TO THIS APP AND MAKE IT BETTER.
 THANK YOU.
 
     
