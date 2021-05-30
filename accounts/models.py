@@ -36,6 +36,7 @@ class NewUser(AbstractBaseUser):
     username = models.CharField(null=True, blank=True, max_length=30, unique=True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
+    # you can add more fields here 
     objects = NewUserManager()
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
