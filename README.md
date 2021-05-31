@@ -99,9 +99,9 @@ You can add more fields to `accounts/models.py` by adding more fiedls to the fol
 class NewUser(AbstractBaseUser):
     email = models.EmailField(verbose_name='email address', max_length=255, unique=True)
     username = models.CharField(null=True, blank=True, max_length=30, unique=True)
-    [more fields like first_name, last_name, phone_number etc]
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
+    # you can add more fields here 
     objects = NewUserManager()
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
