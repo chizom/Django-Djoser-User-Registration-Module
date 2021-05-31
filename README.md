@@ -27,9 +27,10 @@ Add the following to your INSTALLED_APPS in the `settings.py` file.
  Also add the following at the bottom of the `settings.py` file:
  
  ```
-     ##################################
-     # CUSTOM AUTHENTICATION SETTINGS #
-     ##################################
+    ##################################
+    # CUSTOM AUTHENTICATION SETTINGS #
+    ##################################
+
 
     REST_FRAMEWORK = {
         'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -42,10 +43,8 @@ Add the following to your INSTALLED_APPS in the `settings.py` file.
 
     DJOSER = {
         'LOGIN_FIELD': 'email',
-        'SERIALIZERS': {
-            # 'user_registration': 'accounts.serializers.NewUserSerializer',  
-            # 'user': 'accounts.serializers.UserCreateSerializer',
-            # 'current_user': 'authentication.serializers.CurrentUserSerializer' 
+        'SERIALIZERS': { 
+            'user_create': 'accounts.serializers.NewUserSerializer',
         }
     }
     AUTH_USER_MODEL = 'accounts.NewUser'
